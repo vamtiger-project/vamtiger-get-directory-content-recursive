@@ -1,6 +1,6 @@
 {
     "name": "vamtiger-get-directory-content-recursive",
-    "version": "0.0.5-0",
+    "version": "0.0.5",
     "description": "Recursively get all directory cotent for a defined path.",
     "main": "build",
     "scripts": {
