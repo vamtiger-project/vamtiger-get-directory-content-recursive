@@ -1,0 +1,41 @@
+{
+    "name": "vamtiger-get-directory-content-recursive",
+    "version": "0.0.2-0",
+    "description": "Recursively get all directory cotent for a defined path.",
+    "main": "build",
+    "scripts": {
+        "test": "mocha build/test --recursive",
+        "build": "tsc",
+        "commit": "vamtigerNodeTypescriptCommit --push --publish"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vamtiger-project/vamtiger-get-directory-content-recursive.git"
+    },
+    "keywords": [
+        "directory",
+        "content",
+        "recursive",
+        "vamtiger"
+    ],
+    "author": "Vamtiger Immortalles",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/vamtiger-project/get-directory-content-recursive/issues"
+    },
+    "homepage": "https://github.com/vamtiger-project/get-directory-content-recursive#readme",
+    "types": "build/index.d.ts",
+    "devDependencies": {
+        "@types/chai": "^4.0.10",
+        "@types/mocha": "^2.2.45",
+        "@types/node": "^8.5.2",
+        "chai": "^4.1.2",
+        "mocha": "^4.0.1",
+        "typescript": "^2.6.2",
+        "vamtiger-node-typescript-commit": "0.0.51"
+    },
+    "dependencies": {
+        "vamtiger-get-directory-content": "^0.0.32",
+        "vamtiger-get-path-data": "^0.0.2"
+    }
+}
