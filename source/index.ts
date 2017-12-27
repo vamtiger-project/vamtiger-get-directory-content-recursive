@@ -8,7 +8,7 @@ export default async(params: IParams) => {
         absolutePath,
         classified
     });
-    const result = await directoryContent.result({});
+    const result = await directoryContent.result();
 
     return result;
 }

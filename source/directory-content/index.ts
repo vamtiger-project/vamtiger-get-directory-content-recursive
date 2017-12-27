@@ -18,8 +18,8 @@ export default class DirectoryContent {
          this.file = new Set();
     }
 
-    async result(params: IResultParams) {
-        const currentPath = params.currentPath ? params.currentPath : this.absolutePath;
+    async result(params?: IResultParams) {
+        const currentPath = params && params.currentPath ? params.currentPath : this.absolutePath;
         const directoryContent = await getDirectoryContent(currentPath);
         const updated = await Promise.all(directoryContent.map(content => this.update({
             parentDirecotry: currentPath,
