@@ -7,7 +7,7 @@ export default class DirectoryContent {
     directory: DirectoryContentSet;
     file: DirectoryContentSet;
     constructor(params: IParams);
-    result(params: IResultParams): Promise<PathLike[] | {
+    result(params?: IResultParams): Promise<PathLike[] | {
         file: PathLike[];
         directory: PathLike[];
     }>;

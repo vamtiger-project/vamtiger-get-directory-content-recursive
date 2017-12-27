@@ -21,7 +21,7 @@ class DirectoryContent {
     }
     result(params) {
         return __awaiter(this, void 0, void 0, function* () {
-            const currentPath = params.currentPath ? params.currentPath : this.absolutePath;
+            const currentPath = params && params.currentPath ? params.currentPath : this.absolutePath;
             const directoryContent = yield vamtiger_get_directory_content_1.default(currentPath);
             const updated = yield Promise.all(directoryContent.map(content => this.update({
                 parentDirecotry: currentPath,

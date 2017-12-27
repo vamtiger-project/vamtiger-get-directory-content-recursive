@@ -16,7 +16,7 @@ exports.default = (params) => __awaiter(this, void 0, void 0, function* () {
         absolutePath,
         classified
     });
-    const result = yield directoryContent.result({});
+    const result = yield directoryContent.result();
     return result;
 });
 //# sourceMappingURL=index.js.map
