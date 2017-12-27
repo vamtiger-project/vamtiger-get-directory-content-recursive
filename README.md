@@ -1,4 +1,4 @@
-# VAMTIGER Bash
+# VAMTIGER Get Directory Content Recursive
 Get a list of all entries for a defined directory path and respective subdirectories.
 
 ## Installation
