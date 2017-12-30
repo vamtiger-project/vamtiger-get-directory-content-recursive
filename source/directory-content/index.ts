@@ -26,7 +26,7 @@ export default class DirectoryContent {
             content
         })));
         const done = updated.every(updateStatus => updateStatus === true);
-        const recursiveDirectoryContent = this.classified ?
+        const recursiveDirectoryContent: Result = this.classified ?
             {
                 file: Array.from(this.file),
                 directory: Array.from(this.directory)
@@ -88,3 +88,5 @@ export interface ClassifiedDirectoryContent {
 export type DirectoryContentSet = Set<PathLike>;
 
 export type UnclassifiedDirectoryContent = PathLike[];
+
+export type Result = UnclassifiedDirectoryContent | ClassifiedDirectoryContent;

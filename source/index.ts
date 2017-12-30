@@ -1,5 +1,5 @@
 import { PathLike } from 'fs';
-import DirectoryContent from './directory-content';
+import { default as DirectoryContent, ClassifiedDirectoryContent} from './directory-content';
 
 export default async(params: IParams) => {
     const absolutePath = params.path;
