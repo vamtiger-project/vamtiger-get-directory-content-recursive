@@ -7,14 +7,8 @@ export default class DirectoryContent {
     directory: DirectoryContentSet;
     file: DirectoryContentSet;
     constructor(params: IParams);
-    result(params?: IResultParams): Promise<PathLike[] | {
-        file: PathLike[];
-        directory: PathLike[];
-    }>;
-    update(params: IUpdateParams): Promise<boolean | PathLike[] | {
-        file: PathLike[];
-        directory: PathLike[];
-    }>;
+    result(params?: IResultParams): Promise<Result>;
+    update(params: IUpdateParams): Promise<boolean | PathLike[] | ClassifiedDirectoryContent>;
 }
 export interface IParams {
     absolutePath: PathLike;
@@ -33,3 +27,4 @@ export interface ClassifiedDirectoryContent {
 }
 export declare type DirectoryContentSet = Set<PathLike>;
 export declare type UnclassifiedDirectoryContent = PathLike[];
+export declare type Result = UnclassifiedDirectoryContent | ClassifiedDirectoryContent;
