@@ -9,6 +9,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const directory_content_1 = require("./directory-content");
+var directory_content_2 = require("./directory-content");
+exports.DirectoryContent = directory_content_2.default;
 exports.default = (params) => __awaiter(this, void 0, void 0, function* () {
     const absolutePath = params.path;
     const classified = params.classified ? true : false;
