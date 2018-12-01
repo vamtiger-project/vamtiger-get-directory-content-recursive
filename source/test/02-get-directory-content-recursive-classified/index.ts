@@ -2,8 +2,7 @@ import { PathLike, Stats } from 'fs';
 import { resolve as resolvePath } from 'path';
 import { expect } from 'chai';
 import getPathData from 'vamtiger-get-path-data';
-import getDirectoryContent from '../..';
-import { ClassifiedDirectoryContent } from '../../directory-content';
+import getDirectoryContent, { ClassifiedDirectoryContent } from '../..';
 import expectedDirectoryContent from './mock-data';
 
 const directory = resolvePath(

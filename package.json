@@ -9,7 +9,7 @@
         "build": "npm run clean && tsc && npm run test-build && npm run clean-build",
         "clean": "vamtiger-remove -d build",
         "clean-build": "vamtiger-remove -d build/test",
-        "commit": "vamtigerNodeTypescriptCommit --push --publish"
+        "commit": "npm test && vamtigerNodeTypescriptCommit --push --publish"
     },
     "repository": {
         "type": "git",

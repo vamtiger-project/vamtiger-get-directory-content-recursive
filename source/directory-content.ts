@@ -2,15 +2,16 @@ import { PathLike } from 'fs';
 import { resolve as resolvePath } from 'path';
 import getDirectoryContent from 'vamtiger-get-directory-content';
 import getPathData from 'vamtiger-get-path-data';
+import { IDirectoryContent, DirectoryContentSet, IResultParams, Result, IUpdateParams } from '.';
 
 export default class DirectoryContent {
-    private absolutePath: IParams['absolutePath'];
-    private classified: IParams['classified'];
+    private absolutePath: IDirectoryContent['params']['absolutePath'];
+    private classified: IDirectoryContent['params']['classified'];
     public directoryContent: DirectoryContentSet;
     public directory: DirectoryContentSet;
     public file: DirectoryContentSet;
 
-    constructor(params: IParams) {
+    constructor(params: IDirectoryContent['params']) {
          this.absolutePath = params.absolutePath;
          this.classified = params.classified;
          this.directoryContent = new Set();
@@ -65,28 +66,3 @@ export default class DirectoryContent {
         return updating;
     }
 }
-
-export interface IParams {
-    absolutePath: PathLike;
-    classified: boolean;
-}
-
-export interface IResultParams{
-    currentPath?: IParams['absolutePath'];
-}
-
-export interface IUpdateParams{
-    parentDirecotry: IParams['absolutePath'];
-    content: string;
-}
-
-export interface ClassifiedDirectoryContent {
-    file: PathLike[];
-    directory: PathLike[];
-}
-
-export type DirectoryContentSet = Set<PathLike>;
-
-export type UnclassifiedDirectoryContent = PathLike[];
-
-export type Result = UnclassifiedDirectoryContent | ClassifiedDirectoryContent;

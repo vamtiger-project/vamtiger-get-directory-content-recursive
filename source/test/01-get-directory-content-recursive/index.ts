@@ -1,8 +1,7 @@
 import { PathLike } from 'fs';
 import { resolve as resolvePath } from 'path';
 import { expect } from 'chai';
-import getDirectoryContent from '../..';
-import { UnclassifiedDirectoryContent } from '../../directory-content';
+import getDirectoryContent, { UnclassifiedDirectoryContent } from '../..';
 import expectedDirectoryContent from './mock-data';
 
 const directory = resolvePath(

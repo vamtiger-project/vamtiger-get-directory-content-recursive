@@ -1,5 +1,5 @@
-import { default as DirectoryContent, ClassifiedDirectoryContent} from './directory-content';
-import { IParams } from '.';
+import { default as DirectoryContent} from './directory-content';
+import { IParams, ClassifiedDirectoryContent } from '.';
 
 export default async function (params: IParams) {
     const absolutePath = params.path;
