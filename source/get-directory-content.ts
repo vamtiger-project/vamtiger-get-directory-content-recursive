@@ -1,0 +1,14 @@
+import { default as DirectoryContent, ClassifiedDirectoryContent} from './directory-content';
+import { IParams } from '.';
+
+export default async function (params: IParams) {
+    const absolutePath = params.path;
+    const classified = params.classified ? true : false;
+    const directoryContent = new DirectoryContent({
+        absolutePath,
+        classified
+    });
+    const result = await directoryContent.result();
+
+    return result;
+}
