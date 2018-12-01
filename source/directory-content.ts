@@ -2,7 +2,7 @@ import { PathLike } from 'fs';
 import { resolve as resolvePath } from 'path';
 import getDirectoryContent from 'vamtiger-get-directory-content';
 import getPathData from 'vamtiger-get-path-data';
-import { IDirectoryContent, DirectoryContentSet, IResultParams, Result, IUpdateParams } from '.';
+import { IDirectoryContent, DirectoryContentSet, IResultParams, Result, IUpdateParams, ClassifiedDirectoryContent } from '.';
 
 export default class DirectoryContent {
     private absolutePath: IDirectoryContent['params']['absolutePath'];
