@@ -41,11 +41,11 @@ export default class DirectoryContent {
         const parentDirecotry = params.parentDirecotry;
         const content = params.content;
         const contentPath = resolvePath(
-            parentDirecotry,
+            parentDirecotry as string,
             content
         );
         const pathData = await getPathData(contentPath);
-        
+
         let updating;
 
         this.directoryContent.add(contentPath);
@@ -61,7 +61,7 @@ export default class DirectoryContent {
 
             updating = Promise.resolve(true);
         }
-        
+
         return updating;
     }
 }
