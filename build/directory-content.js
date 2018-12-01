@@ -61,4 +61,4 @@ class DirectoryContent {
     }
 }
 exports.default = DirectoryContent;
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=directory-content.js.map
