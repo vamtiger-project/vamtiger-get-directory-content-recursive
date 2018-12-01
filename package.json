@@ -1,11 +1,14 @@
 {
     "name": "vamtiger-get-directory-content-recursive",
-    "version": "0.0.12",
+    "version": "0.0.13-0",
     "description": "Recursively get all directory cotent for a defined path.",
     "main": "build",
     "scripts": {
-        "test": "npm run build && mocha build/test --recursive",
-        "build": "tsc",
+        "test": "npm run build",
+        "test-build": "mocha build/test --recursive",
+        "build": "npm run clean && tsc && npm run test-build && npm run clean-build",
+        "clean": "vamtiger-remove -d build",
+        "clean-build": "vamtiger-remove -d build/test",
         "commit": "vamtigerNodeTypescriptCommit --push --publish"
     },
     "repository": {
@@ -33,7 +36,8 @@
         "chai": "^4.2.0",
         "mocha": "^4.1.0",
         "typescript": "^2.9.2",
-        "vamtiger-node-typescript-commit": "^0.0.51"
+        "vamtiger-node-typescript-commit": "0.0.65",
+        "vamtiger-remove": "0.0.5"
     },
     "dependencies": {
         "vamtiger-get-directory-content": "^0.0.32",
