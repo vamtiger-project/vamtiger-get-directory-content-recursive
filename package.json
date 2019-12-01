@@ -35,7 +35,7 @@
         "@types/node": "^8.10.38",
         "chai": "^4.2.0",
         "mocha": "^4.1.0",
-        "typescript": "^2.9.2",
+        "typescript": "^3.7.2",
         "vamtiger-node-typescript-commit": "0.0.65",
         "vamtiger-remove": "0.0.5"
     },

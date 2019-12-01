@@ -2,7 +2,7 @@ import { PathLike } from 'fs';
 import { resolve as resolvePath } from 'path';
 import getDirectoryContent from 'vamtiger-get-directory-content';
 import getPathData from 'vamtiger-get-path-data';
-import { IDirectoryContent, DirectoryContentSet, IResultParams, Result, IUpdateParams, ClassifiedDirectoryContent } from '.';
+import { IDirectoryContent, DirectoryContentSet, IResultParams, IUpdateParams } from '.';
 
 export default class DirectoryContent {
     private absolutePath: IDirectoryContent['params']['absolutePath'];
@@ -27,7 +27,7 @@ export default class DirectoryContent {
             content
         })));
         const done = updated.every(updateStatus => updateStatus === true);
-        const recursiveDirectoryContent: Result = this.classified ?
+        const recursiveDirectoryContent = this.classified ?
             {
                 file: Array.from(this.file),
                 directory: Array.from(this.directory)

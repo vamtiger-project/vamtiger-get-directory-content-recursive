@@ -2,7 +2,7 @@ import { PathLike, Stats } from 'fs';
 import { resolve as resolvePath } from 'path';
 import { expect } from 'chai';
 import getPathData from 'vamtiger-get-path-data';
-import getDirectoryContent, { ClassifiedDirectoryContent } from '../..';
+import getDirectoryContent from '../..';
 import expectedDirectoryContent from './mock-data';
 
 const directory = resolvePath(
@@ -15,7 +15,7 @@ describe('get-directory-content-recursive should', function () {
         const directoryContent = await getDirectoryContent({
             path: directory,
             classified: true
-        }) as ClassifiedDirectoryContent;
+        });
         const filePathData = await Promise
             .all(directoryContent.file.map(currentFile => getPathData(currentFile)));
         const directoryPathData = await Promise

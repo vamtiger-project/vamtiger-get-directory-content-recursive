@@ -1,7 +1,7 @@
 import { default as DirectoryContent} from './directory-content';
-import { IParams, Result } from '.';
+import { Params, Result } from '.';
 
-export default async function (params: IParams) {
+export default async function <P extends Params>(params: P) {
     const absolutePath = params.path;
     const classified = params.classified ? true : false;
     const directoryContent = new DirectoryContent({
@@ -10,5 +10,5 @@ export default async function (params: IParams) {
     });
     const result = await directoryContent.result();
 
-    return result;
+    return result as Result<P>;
 }
