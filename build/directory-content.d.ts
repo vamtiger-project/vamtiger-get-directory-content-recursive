@@ -1,6 +1,6 @@
 /// <reference types="node" />
 import { PathLike } from 'fs';
-import { IDirectoryContent, DirectoryContentSet, IResultParams, Result, IUpdateParams, ClassifiedDirectoryContent } from '.';
+import { IDirectoryContent, DirectoryContentSet, IResultParams, IUpdateParams } from '.';
 export default class DirectoryContent {
     private absolutePath;
     private classified;
@@ -8,6 +8,12 @@ export default class DirectoryContent {
     directory: DirectoryContentSet;
     file: DirectoryContentSet;
     constructor(params: IDirectoryContent['params']);
-    result(params?: IResultParams): Promise<Result>;
-    update(params: IUpdateParams): Promise<boolean | PathLike[] | ClassifiedDirectoryContent>;
+    result(params?: IResultParams): Promise<PathLike[] | {
+        file: PathLike[];
+        directory: PathLike[];
+    }>;
+    update(params: IUpdateParams): Promise<boolean | PathLike[] | {
+        file: PathLike[];
+        directory: PathLike[];
+    }>;
 }

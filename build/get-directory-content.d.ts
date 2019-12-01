@@ -1,2 +1,2 @@
-import { IParams, Result } from '.';
-export default function (params: IParams): Promise<Result>;
+import { Params, Result } from '.';
+export default function <P extends Params>(params: P): Promise<Result<P>>;
